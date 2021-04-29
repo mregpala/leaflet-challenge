@@ -12,11 +12,19 @@ html {
 .legend {
   padding: 10px;
   font-family: Sanchez, serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
-  line-height: 18px;
+  line-height: 24px;
   color: #555;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+/* .legend li { float: left; margin-right: 10px; } */
+.no-bullets {list-style-type: none;} 
+.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
+.gtr20 { background-color: #800026; }
+.gtr15 { background-color: #BD0026; }
+.gtr10 { background-color: #E31A1C; }
+.gtr5 { background-color: #FC4E2A; }
+.gtr0 { background-color: #FD8D3C; }

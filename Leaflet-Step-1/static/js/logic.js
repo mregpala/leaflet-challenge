@@ -106,12 +106,22 @@ info.onAdd = function() {
 info.addTo(myMap);
 
 document.querySelector(".legend").innerHTML = [
-  "<p>Depth Greater Than 20</p>" +
-  "<p>Depth Greater Than 15</p>" +
-  "<p>Depth Greater Than 10</p>" +
-  "<p>Depth Greater Than  5</p>" +
-  "<p>Depth Greater Than  0</p>" 
+  "<h3>Depth</h3><hr>" +
+  "<ul class=\"no-bullets\">" +
+    "<li><span class=\"gtr20\"></span>Greater Than 20</li>" +
+    "<li><span class=\"gtr15\"></span>Greater Than 15</li>" +
+    "<li><span class=\"gtr10\"></span>Greater Than 10</li>" +
+    "<li><span class=\"gtr5\"></span>Greater Than  5</li>" +
+    "<li><span class=\"gtr0\"></span>Greater Than  0</li>" +
+  "</ul>"
 ].join("");
+
+  // "<p>Depth Greater Than 20</p>" +
+  // "<p>Depth Greater Than 15</p>" +
+  // "<p>Depth Greater Than 10</p>" +
+  // "<p>Depth Greater Than  5</p>" +
+  // "<p>Depth Greater Than  0</p>" 
+
 
 });
 
