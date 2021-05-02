@@ -3,7 +3,7 @@
 This website generates a a mutli layer Leaflet map in order to visualize seismic activity data that is provisioned from the USGS data feed (USGS Data Feed)[https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php].  The site consists of a few different data feed options.  Our site utilizes the data feed that genereates a list of earthquakes that has occured over the past 7 days, which new data is synced every 10 minutes.
 
 
-Utilizing javascript and D3 we consumed the GeoJSON formatted data from the USGS site.  Leaftlet has an object type L.GeoJSON that was designed to work with GeoJSON formatted data in order to streamline the plotting of the earthquake location points and using metrics (magnitude and depth) to correlate magnitude of earthquake to marker size and depth range category to a color.  The following is an example of the formatted data: ![](Leaflet-Step-1/static/images/4-JSON.PNG)
+Utilizing javascript and D3 we consumed the GeoJSON formatted data from the USGS site.  Leaftlet has an object type L.GeoJSON that is designed to work with GeoJSON formatted data in order to streamline the plotting of the earthquake location points and using metrics (magnitude and depth) to correlate magnitude of earthquake to marker size and depth range category to a color.  The following is an example of the formatted data: ![](Leaflet-Step-1/static/images/4-JSON.PNG)
 
 The following is the snippet of code which shows the instantiation of the Leaflet GeoJson object, which features is an arrary of feature objects from extracted from API JSON response.
 
@@ -20,8 +20,7 @@ The following is the snippet of code which shows the instantiation of the Leafle
         onEachFeature: onEachFeature,
         pointToLayer: (featureData, latlng) => 
         {
-        //   return L.marker(latlng)    
-        return L.circle(latlng,
+         return L.circle(latlng,
             {radius: featureData.properties.mag*100,
             fillColor:getColor(featureData.geometry.coordinates[2]) }
             )
@@ -38,10 +37,11 @@ The following is the snippet of code which shows the instantiation of the Leafle
     }
 
 
-Popup text is also associated with each marker, which consist of the following:
+The following is an example of the Popup text that is associated with each marker:
 ![](Leaflet-Step-1/static/images/popup.PNG)
 
 
+The array of circle markers associated with pointToLayer property, has a conditional color associted with each marker based on incident depth.
 A function was created to associate the depth of the earthquake to a color range:
 
     function getColor(d) {
@@ -76,3 +76,6 @@ Javascript:
     "</ul>"
     ].join("");
 
+The following is a screenshot of the map visualization including legend:
+
+![](Leaflet-Step-1/static/images/map_screenshot.png)
