@@ -6,11 +6,11 @@ var features = "";
 
 //Function to return colors based on depth.
 function getColor(d) {
-  return d > 20 ? '#800026' :
-         d > 15  ? '#BD0026' :
-         d > 10  ? '#E31A1C' :
-         d > 5  ? '#FC4E2A' :
-         d > 0   ? '#FD8D3C' :
+  return d > 20 ? '#e73d0a' :
+         d > 15  ? '#e7a00a' :
+         d > 10  ? '#dfe70a' :
+         d > 5  ? '#acff0a' :
+         d > 0   ? '#155803' :
                    '#FFEDA0';
 };
 
@@ -25,13 +25,14 @@ d3.json(queryUrl).then(function(response) {
     layer.bindPopup("<h3>" + featureData.properties.place + "</h3>" +
                     "<h3>Magnitude: " + featureData.properties.mag + ", Depth: " +
                     featureData.geometry.coordinates[2] + "</h3>" +
+                    "<h3>Coordinates: " + featureData.geometry.coordinates[1] + ", " + featureData.geometry.coordinates[0] + "</h3>" +
                     "<hr><p>" + new Date(featureData.properties.time) + "</p>");
   }
   console.log(features);
   var earthquakes = L.geoJSON(features, {
     style: {
       weight: 2,
-      opacity: 1,
+      opacity: .7,
       color: "#666",
       dashArray: '3',
       fillOpacity: 0.7         
@@ -78,10 +79,8 @@ d3.json(queryUrl).then(function(response) {
 
   // Create our map, giving it the streetmap and earthquakes layers to display on load
   var myMap = L.map("map", {
-    center: [
-      37.09, -95.71
-    ],
-    zoom: 5,
+    center: [61.2912,-149.9096],
+    zoom: 10,
     layers: [streetmap, earthquakes]
   });
 
@@ -115,12 +114,6 @@ document.querySelector(".legend").innerHTML = [
     "<li><span class=\"gtr0\"></span>Greater Than  0</li>" +
   "</ul>"
 ].join("");
-
-  // "<p>Depth Greater Than 20</p>" +
-  // "<p>Depth Greater Than 15</p>" +
-  // "<p>Depth Greater Than 10</p>" +
-  // "<p>Depth Greater Than  5</p>" +
-  // "<p>Depth Greater Than  0</p>" 
 
 
 });

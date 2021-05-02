@@ -23,8 +23,8 @@ html {
 /* .legend li { float: left; margin-right: 10px; } */
 .no-bullets {list-style-type: none;} 
 .legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
-.gtr20 { background-color: #800026; }
-.gtr15 { background-color: #BD0026; }
-.gtr10 { background-color: #E31A1C; }
-.gtr5 { background-color: #FC4E2A; }
-.gtr0 { background-color: #FD8D3C; }
+.gtr20 { background-color: #e73d0a; }
+.gtr15 { background-color: #e7a00a; }
+.gtr10 { background-color: #dfe70a; }
+.gtr5 { background-color: #acff0a; }
+.gtr0 { background-color: #155803; }

@@ -1,1 +1,2 @@
-# leaflet-challenge
+# Leaflet-Challenge Visualizing USGS Data with Leaflet
+THe website applciation utilizes USGS GeoJson data of seismic events that has occurred over the past 7 days. THe data is updated every 10 minutes.  
