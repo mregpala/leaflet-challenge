@@ -84,14 +84,15 @@ d3.json(queryUrl).then(function(response) {
     layers: [streetmap, earthquakes]
   });
 
-//create Layer Control
+//create Layer Control that will toggle between map type layers (Stree Map and Dark Map)
   L.control.layers(baseMaps, overlayMaps, {
     collapsed: false
   }).addTo(myMap);
 
 
-// When the layer control is added, insert a div with the class of "legend"
-// Create a legend to display information about our map
+// When the layer control is added just a a positional object in bottom right of map object
+//A div container with class of "legend" is added into control.
+
 var info = L.control({
   position: "bottomright"
 });
