@@ -1,6 +1,6 @@
 # Leaflet-Challenge Visualizing USGS Data with Leaflet
 ![alt](Leaflet-Step-1/static/images/Italy-earthquake-damage.jpg)
-This website generates a a mutli layer Leaflet map in order to visualize seismic activity data that is provisioned from the USGS data feed (USGS Data Feed)[https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php].  The site consists of a few different data feed options.  Our site utilizes the data feed that genereates a list of earthquakes that has occured over the past 7 days, which new data is synced every 10 minutes.
+This website generates a a mutli layer Leaflet map in order to visualize seismic activity data that is provisioned from the USGS data feed [USGS Data Feed Site](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php).  The site consists of a few different data feed options.  Our site utilizes the data feed that genereates a list of earthquakes that has occured over the past 7 days, which new data is synced every 10 minutes.
 
 
 Utilizing javascript and D3 we consumed the GeoJSON formatted data from the USGS site.  Leaftlet has an object type L.GeoJSON that is designed to work with GeoJSON formatted data in order to streamline the plotting of the earthquake location points and using metrics (magnitude and depth) to correlate magnitude of earthquake to marker size and depth range category to a color.  The following is an example of the formatted data: ![](Leaflet-Step-1/static/images/4-JSON.PNG)
@@ -78,6 +78,8 @@ Javascript:
 
 The following is a screenshot of the map visualization including legend:
 
-# View site !(Site)[https://mregpala.github.io/leaflet-challenge/Leaflet-Step-1/]
+## Final Product
+[View Site](https://mregpala.github.io/leaflet-challenge/Leaflet-Step-1/)
+
 
 ![](Leaflet-Step-1/static/images/map_screenshot.png)
