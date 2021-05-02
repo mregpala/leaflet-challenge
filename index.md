@@ -78,4 +78,6 @@ Javascript:
 
 The following is a screenshot of the map visualization including legend:
 
+# View site !(Site)[https://mregpala.github.io/leaflet-challenge/Leaflet-Step-1/]
+
 ![](Leaflet-Step-1/static/images/map_screenshot.png)
